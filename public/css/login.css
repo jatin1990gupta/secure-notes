@@ -84,6 +84,9 @@ form p a {
   .container {
     flex-direction: column;
     width: 80vw;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
   }
 
   .container .part1 {
