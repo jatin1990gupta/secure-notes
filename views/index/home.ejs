@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Notes App</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to Secure Notes</h1>
+    </div>
+
+    <div class="container">
+        <img src="/img/logo.png" alt="Secure Notes">
+        <% if(isAuthenticated) { %>
+        <a href="/dashboard">Go to dashboard</a>
+        <a href="/auth/logout">logout</a>
+        <% } else { %>
+        <a href="/auth/login">Start for Free</a>
+        <% } %>
+    </div>
+
+</body>
+
+</html>

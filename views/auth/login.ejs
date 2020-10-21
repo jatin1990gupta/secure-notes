@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/28bfa5d676.js" crossorigin="anonymous"></script>
+    <title>Notes App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="part1">
+            <img src="/img/logo.png" alt="Secure Notes">
+        </div>
+        <div class="part2">
+            <a href="/home">Home</a>
+            <h1>Login</h1>
+            <form action="/auth/login" method="post">
+                <label for="email">Email ID</label>
+                <input type="email" name="email" id="email">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+
+                <button type="submit">Login</button>
+                <p>New User? <a href="/auth/signup">Create Account</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

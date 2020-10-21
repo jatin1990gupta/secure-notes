@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/note.css">
+    <title>Notes App</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <% if (editing) { %>
+            <h1>Edit Note</h1>
+            <% } else { %>
+            <h1>Create Note</h1>
+            <% } %>
+        </div>
+
+        <div class="content">
+            <a href="/dashboard">Back</a>
+            <form action="/note/<% if(editing) { %>editNote<% } else { %>createNote<% } %>" method="post">
+
+                <input type="text" name="title" id="title" placeholder="Title"
+                    value="<% if (editing) { %><%= title %><% } %>">
+                <input type="text" name="body" id="body" placeholder="Content"
+                    value="<% if (editing) { %><%= body %><% } %>">
+
+                <% if (editing) { %>
+                <input type="hidden" name="noteId" value="<%= noteId %>">
+                <% } %>
+
+                <button type="submit"><% if(editing) { %>Edit Note<% } else { %>Create<% } %></button>
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #272727;
+}
+
+.container {
+  background-color: #fffce8;
+  position: relative;
+  top: 10vh;
+  width: 90vw;
+  height: 80vh;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 2px 5px 2px 5px #0f0f0f;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  height: 15%;
+  background-color: #d36135;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.header .links a {
+  font-size: 17px;
+  margin: 0px 5px;
+  color: #dad7c7;
+}
+
+.content .allNotes {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 50px;
+  padding: 30px;
+}
+.noteContent {
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.noteContent:hover {
+  transform: scale(1.03);
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+}
+
+.noteTitle {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.noteOptions i {
+  margin: 0 5px;
+  font-size: 20px;
+  color: black;
+}
+
+.noteBody {
+  padding: 0px 20px 20px 20px;
+  margin: 10px 0;
+  color: #6d6d6d;
+}
+
+.content > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin: 30px auto;
+  background-color: #d36135;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px 1px #0f0f0f;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 85vw;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 20%;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .header .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .links a {
+    font-size: 1rem;
+    margin: 5px 0px;
+  }
+
+  .content .allNotes {
+    flex-direction: column;
+    margin: 0;
+    padding: 30px;
+  }
+  .noteContent {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .content > a {
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+  }
+}

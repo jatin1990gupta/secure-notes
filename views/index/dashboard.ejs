@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/28bfa5d676.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Your Notes</h1>
+            <div class="links">
+                <a href="/home">Home</a>
+                <a href="/auth/logout">logout</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="allNotes">
+                <% if(notes.length > 0) { %>
+                <% notes.forEach(n => { %>
+                <div class="noteContent">
+                    <div class="noteHeader">
+                        <div class="noteTitle">
+                            <%= n.title %>
+                        </div>
+                        <div class="noteOptions">
+                            <a href="/note/editNote/<%= n._id %>"><i class="far fa-edit"></i></a>
+                            <a href="/note/deleteNote/<%= n._id %>"><i class="far fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="noteBody">
+                        <%= n.body %>
+                    </div>
+                </div>
+                <% }) %>
+                <% } else { %>
+                <p>No notes found. Please add one.</p>
+                <% } %>
+            </div>
+            <a href="/note/createNote">New Note</a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

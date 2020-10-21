@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/signup.css">
+    <title>Notes App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="part1">
+            <img src="/img/logo.png" alt="Secure Notes">
+        </div>
+        <div class="part2">
+            <a href="/home">Home</a>
+            <h1>Signup</h1>
+            <form action="/auth/signup" method="post">
+                <label for="name">Enter name</label>
+                <input type="text" name="name" id="name">
+
+                <label for="email">Enter email</label>
+                <input type="email" name="email" id="email">
+
+                <label for="phone">Enter phone</label>
+                <input type="number" name="phone" id="phone">
+
+                <label for="password">Enter Password</label>
+                <input type="password" name="password" id="password">
+
+                <label for="c_password">Confirm Password</label>
+                <input type="password" name="c_password" id="c_password">
+
+                <button type="submit">Signup</button>
+                <p>Already have a account? <a href="/auth/login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
