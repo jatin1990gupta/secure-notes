@@ -70,16 +70,9 @@ body {
 @media (max-width: 450px) {
   .container {
     width: 80vw;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 2px 5px 2px 5px #0f0f0f;
-  }
-
-  .header {
-    padding: 0px 30px;
-    height: 15%;
-    background-color: #d36135;
-    border-radius: 8px 8px 0px 0px;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
   }
 
   .header h1 {
@@ -87,12 +80,8 @@ body {
   }
 
   .content form input {
-    padding: 0px 10px;
     font-size: 0.8rem;
-    color: #d36135;
-    height: 50px;
     width: 70%;
-    margin: 10px auto;
   }
 
   .content form button {
